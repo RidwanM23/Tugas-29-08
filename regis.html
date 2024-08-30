@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Acara Musim Panas</title>
+    <link rel="stylesheet" href="regis.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran Acara Musim Panas</h1>
+        <form onsubmit="handleSubmit(event)">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" required>
+
+            <label for="acara">Pilih Acara:</label>
+            <select id="acara" name="acara" required>
+                <option value="">Pilih acara...</option>
+                <option value="pantai">Pesta Pantai</option>
+                <option value="piknik">Piknik Taman</option>
+                <option value="konser">Konser Musim Panas</option>
+                <option value="olahraga">Turnamen Olahraga</option>
+            </select>
+
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Simulasi proses pendaftaran
+            setTimeout(() => {
+                alert("Pendaftaran berhasil! Anda akan diarahkan ke halaman login.");
+                window.location.href = "login.html";
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
